@@ -21,9 +21,12 @@ function App() {
       age,
       username,
     }).then((response) => {
+      const newId = response.data._id;
+      console.log(`newId: ${newId}`);
       setListOfUsers([
         ...listOfUsers,
         {
+          _id: newId,
           name,
           age,
           username,

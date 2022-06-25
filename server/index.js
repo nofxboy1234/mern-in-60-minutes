@@ -25,7 +25,8 @@ app.post('/createUser', async (req, res) => {
   const newUser = new UserModel(user);
   await newUser.save();
 
-  res.json(user);
+  console.log(newUser);
+  res.json(newUser);
 });
 
 app.listen(3001, () => {
